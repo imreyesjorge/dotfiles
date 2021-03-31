@@ -8,7 +8,7 @@ super + w
 
 # file manager
 super + f
-	thunar
+	nautilus
 
 # terminal emulator
 super + Return
@@ -21,6 +21,30 @@ super + d
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
+
+################
+#  Media Keys  #
+################
+
+# Raise Volume
+XF86AudioRaiseVolume
+   amixer -c 1 sset Master 2db+
+
+# Lower Volume
+XF86AudioLowerVolume
+   amixer -c 1 sset Master 2db-
+
+# Next Song
+XF86AudioNext
+   spotifyctl -q next
+
+# Previous Song
+XF86AudioPrev
+   spotifyctl -q previous
+
+# Play/Pause Song
+XF86AudioPlay
+   spotifyctl -q playpause
 
 #
 # bspwm hotkeys
@@ -65,7 +89,7 @@ super + ctrl + {m,x,y,z}
 #
 
 # focus the node in the given direction
-super + {_,shift + }{h,j,k,l}
+super + {_,shift + }{Left,Down,Up,Right}
 	bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
