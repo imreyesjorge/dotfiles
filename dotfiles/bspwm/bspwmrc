@@ -15,7 +15,7 @@ bspc config window_gap          12
 bspc config focused_border_color "#7765e3"
 bspc config normal_border_color "#22223b"
 
-bspc config split_ratio          0.6
+bspc config split_ratio          0.62
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
