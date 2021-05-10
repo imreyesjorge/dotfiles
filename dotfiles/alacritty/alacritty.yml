@@ -1,4 +1,5 @@
-# Configuration for Alacritty, the GPU enhanced terminal emulator.
+# Configuration for Alacritty, the GPU enhanced terminal emulator.c
+background_opacity: .95
 
 # Import additional configuration files
 #
@@ -152,13 +153,13 @@ font:
   #use_thin_strokes: true
   # If `true`, bold text is drawn using the bright color variants.
   #draw_bold_text_with_bright_colors: false
-  
+
   # Colors (Tomorrow Night)
   # colors:
   # Default colors
   # primary:
-    # background: '#22223b'
-    # foreground: '#c5c8c6'
+  # background: '#22223b'
+  # foreground: '#c5c8c6'
   # Bright and dim foreground colors
   #
   # The dimmed foreground color is calculated automatically if it is not
@@ -746,29 +747,29 @@ font:
   # Print all received window events.
   #print_events: false
 colors:
-  name: Atelierdune (dark)
-  author: Chris Kempson
+  name: Nord
+  author: Nord
   primary:
-    background: "#22223b"
-    foreground: "#a6a28c"
+    background: "#2e3440"
+    foreground: "#eceff4"
   cursor:
-    text: "#20201d"
-    cursor: "#a6a28c"
+    text: "#eceff4"
+    cursor: "#eceff4"
   normal:
     black: "#20201d"
-    red: "#d73737"
-    green: "#60ac39"
-    yellow: "#cfb017"
-    blue: "#6684e1"
-    magenta: "#b854d4"
-    cyan: "#1fad83"
-    white: "#a6a28c"
+    red: "#bf616a"
+    green: "#a3be8c"
+    yellow: "#ebcb8b"
+    blue: "#5e81ac"
+    magenta: "#b48ead"
+    cyan: "#88c0d0"
+    white: "#eceff4"
   bright:
-    black: "#7d7a68"
-    red: "#d73737"
-    green: "#60ac39"
-    yellow: "#cfb017"
-    blue: "#6684e1"
-    magenta: "#b854d4"
-    cyan: "#1fad83"
-    white: "#fefbec"
+    black: "#20201d"
+    red: "#bf616a"
+    green: "#a3be8c"
+    yellow: "#ebcb8b"
+    blue: "#5e81ac"
+    magenta: "#b48ead"
+    cyan: "#88c0d0"
+    white: "#eceff4"

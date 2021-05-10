@@ -17,9 +17,9 @@
 ;==========================================================
 
 [colors]
-background = #22223B
-background-alt = #2D2D4E
-background-attention = #D42E43
+background = #2e3440
+background-alt = #3b4252
+background-attention = #ebcb8b
 foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
@@ -30,14 +30,14 @@ alert = #bd2c40
 enable-ipc = true
 width = 100%
 height = 35
-fixed-center = false
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
 border-size = 10
 ;border-color = #00000000
-;radius = 5.0
+radius = 2.0
 
 padding-left = 0
 padding-right = 2
@@ -58,6 +58,8 @@ tray-position = right
 tray-padding = 4
 tray-background = ${colors.background}
 
+wm-restack = bspwm
+
 ;cursor-click = pointer
 ;cursor-scroll = ns-resize
 
@@ -73,6 +75,7 @@ label-occupied = %index%
 label-occupied-padding = 5
 
 label-urgent = %index%
+label-urgent-foreground = ${colors.background-alt}
 label-urgent-background = ${colors.background-attention}
 label-urgent-padding = 5
 
