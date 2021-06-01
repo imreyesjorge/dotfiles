@@ -22,10 +22,6 @@ super + d
 super + Escape
 	pkill -USR1 -x sxhkd
 
-# lock screen
-super + shift + l
-   betterlockscreen -l
-
 #
 #  Media Keys  
 #
