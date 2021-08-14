@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+
+# Set the Background
+if [ -x "$(command -v nitrogen)" ]; then
+	nitrogen --restore
+fi
+
+echo "UnloadTheme" > $XDG_RUNTIME_DIR/leftwm/commands.pipe
+
+pkill picom
+pkill polybar
+pkill dunst
