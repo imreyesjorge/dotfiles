@@ -10,7 +10,7 @@ focus_new_windows = true
 
 [[keybind]]
 command = "Execute"
-value = "firefox"
+value = "chromium"
 modifier = ["modkey"]
 key = "w"
 
@@ -44,7 +44,7 @@ key = "x"
 
 [[keybind]]
 command = "Execute"
-value = "rofi -show run"
+value = "rofi -show drun -display-drun ''"
 modifier = ["modkey"]
 key = "d"
 
