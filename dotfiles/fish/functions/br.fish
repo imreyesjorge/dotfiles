@@ -1,0 +1,1 @@
+/home/reyes/.local/share/broot/launcher/fish/br.fish

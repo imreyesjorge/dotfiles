@@ -5,7 +5,7 @@ tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 layouts = ["MainAndDeck", "CenterMain", "Fibonacci"]
 scratchpad = []
 disable_current_tag_swap = false
-focus_behaviour = "ClickTo"
+focus_behaviour = "Sloppy"
 focus_new_windows = true
 
 [[keybind]]
@@ -22,7 +22,7 @@ key = "Return"
 
 [[keybind]]
 command = "Execute"
-value = "flameshot gui"
+value = "scrot"
 modifier = ["modkey", "Shift"]
 key = "s"
 

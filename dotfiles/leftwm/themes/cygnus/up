@@ -11,7 +11,7 @@ ln -s $SCRIPTPATH/down /tmp/leftwm-theme-down
 
 # Start Picom if it exists
 if [ -x "$(command -v picom)" ]; then
-	picom &
+	picom --config $SCRIPTPATH/picom.conf &
 fi
 
 # Set the theme.toml config
@@ -19,21 +19,17 @@ echo "LoadTheme $SCRIPTPATH/theme.toml" > $XDG_RUNTIME_DIR/leftwm/commands.pipe
 
 # Set the background
 if [ -x "$(command -v nitrogen)" ]; then
-	nitrogen --restore
+	nitrogen --restore &
 fi
 
 # Start Polybar
 if [ -x "$(command -v polybar)" ]; then
-	polybar cygnusbar -c $SCRIPTPATH/polybar.config
+	polybar cygnusbar -c $SCRIPTPATH/polybar.config &
 fi
 
 # Start the notification daemon
 if [ -x "$(command -v dunst)" ]; then
+	pkill dunst
 	dunst &
-fi
-
-# Start the removable media listener
-if [ -x "$(command -v dunst)" ]; then
-	udiskie &
 fi
 

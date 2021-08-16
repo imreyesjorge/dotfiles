@@ -1,0 +1,4 @@
+picom
+polybar
+dunst
+rofi (optional)
