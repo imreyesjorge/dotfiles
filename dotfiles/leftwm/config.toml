@@ -22,7 +22,7 @@ key = "Return"
 
 [[keybind]]
 command = "Execute"
-value = "scrot"
+value = "scrot -sf"
 modifier = ["modkey", "Shift"]
 key = "s"
 
@@ -54,6 +54,41 @@ value = "thunar"
 modifier = ["modkey"]
 key = "f"
 
+[[keybind]]
+command = "Execute"
+value = "amixer -D pulse sset Master 5%+"
+modifier = []
+key = "XF86XK_AudioRaiseVolume"
+
+[[keybind]]
+command = "Execute"
+value = "amixer -D pulse sset Master 5%-"
+modifier = []
+key = "XF86XK_AudioLowerVolume"
+
+[[keybind]]
+command = "Execute"
+value = "amixer -D pulse sset Master toggle"
+modifier = []
+key = "XF86XK_AudioMute"
+
+[[keybind]]
+command = "Execute"
+value = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+modifier = []
+key = "XF86XK_AudioPlay"
+
+[[keybind]]
+command = "Execute"
+value = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+modifier = []
+key = "XF86XK_AudioPrev"
+
+[[keybind]]
+command = "Execute"
+value = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+modifier = []
+key = "XF86XK_AudioNext"
 [[keybind]]
 command = "SwapTags"
 modifier = ["modkey", "Shift"]
