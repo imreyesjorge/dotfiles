@@ -1,4 +1,4 @@
-![](assets/../assets/header.png)
+![](assets/../assets/desktop.png)
 
 My personal dotfiles are Open-Source, feel free to use anything you want.
 
