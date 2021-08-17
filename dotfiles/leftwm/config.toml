@@ -22,7 +22,7 @@ key = "Return"
 
 [[keybind]]
 command = "Execute"
-value = "scrot -sf"
+value = "scrot -sf '%Y-%m-%d.png' -e 'mv $f ~/shots/'"
 modifier = ["modkey", "Shift"]
 key = "s"
 

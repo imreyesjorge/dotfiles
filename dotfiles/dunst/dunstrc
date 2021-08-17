@@ -180,4 +180,4 @@
 
 [Spotify]
 	appname = Spotify
-	format = "<b>%b</b>\n"
+	format = "<b>%s</b>\n%b"
