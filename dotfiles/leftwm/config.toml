@@ -22,7 +22,7 @@ key = "Return"
 
 [[keybind]]
 command = "Execute"
-value = "scrot -sf '%Y-%m-%d.png' -e 'mv $f ~/shots/'"
+value = "flameshot gui"
 modifier = ["modkey", "Shift"]
 key = "s"
 

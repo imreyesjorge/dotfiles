@@ -79,12 +79,19 @@ element {
 
 element-icon { 
     size: 3ch; 
+    background-color: transparent;
+}
+
+element-text {
+  background-color: transparent;
 }
 
 element selected {
   background-color: #343a40;
   text-color: @text;
   border-radius : 5px;
+  border: 1;
+  border-color: #444;
 }
 
 element urgent, element selected urgent {
