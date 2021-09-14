@@ -3,5 +3,5 @@ configuration {
     show-icons: true; 
     icon-theme: "la-capitaine";
     terminal: "/usr/bin/alacritty";
-    modi: "window,drun,run,keys,file-browser";
+    modi: "window,drun,run,keys,filebrowser";
 }

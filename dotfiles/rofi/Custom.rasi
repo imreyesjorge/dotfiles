@@ -13,7 +13,7 @@
 
 
 
-  background-color: #212529;
+  background-color: #212529EE;
   font: "Open Sans 12";
   text-color: @text;
 }
@@ -87,7 +87,7 @@ element-text {
 }
 
 element selected {
-  background-color: #343a40;
+  background-color: #343a4088;
   text-color: @text;
   border-radius : 5px;
   border: 1;
