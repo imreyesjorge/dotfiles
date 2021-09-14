@@ -1,7 +1,7 @@
 import: 
   - "~/.config/alacritty/colors.yml"
 
-background_opacity: .95
+background_opacity: .75
 
 window:
   padding:
