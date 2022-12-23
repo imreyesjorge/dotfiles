@@ -1,0 +1,183 @@
+[global]
+    ### Display ###
+
+    # Which monitor should the notifications be displayed on.
+    monitor = 0
+
+    # Display notification on focused monitor.
+    follow = mouse
+
+    geometry = "300x60-15+55"
+
+    # Show how many messages are currently hidden (because of geometry).
+    indicate_hidden = yes
+
+    #progress_bar = true
+
+    # Shrink window if it's smaller than the width. 
+    shrink = false
+
+    # The transparency of the window. 
+    transparency = 0
+
+    # The height of the entire notification. 
+    notification_height = 0
+
+    # Draw a line of "separator_height" pixel height between two notifications.
+    separator_height = 1
+
+    # Padding between text and separator.
+    padding = 8
+
+    # Horizontal padding.
+    horizontal_padding = 8
+
+    # Defines width in pixels of frame around the notification window.
+    frame_width = 1 
+
+    # Defines color of the frame around the notification window.
+    frame_color = #444444
+
+    # Define a color for the separator.
+    separator_color = frame
+
+    # Sort messages by urgency.
+    sort = yes
+
+    # Don't remove messages, if the user is idle (no mouse or keyboard input) for longer than idle_threshold seconds.
+    idle_threshold = 120
+
+    ### Text ###
+    font = Open Sans 10
+
+    # The spacing between lines.
+    line_height = 0
+
+    markup = full
+
+    # The format of the message. 
+    format = "<b>%s</b>\n%b"
+
+    # Alignment of message text.
+    alignment = center
+
+    # Show age of message if message is older than show_age_threshold seconds
+    show_age_threshold = 60
+
+    # Split notifications into multiple lines if they don't fit into geometry
+    word_wrap = yes
+
+    # When word_wrap is set to no, specify where to make an ellipsis in long lines.
+    ellipsize = middle
+
+    # Ignore newlines '\n' in notifications.
+    ignore_newline = no
+
+    # Stack together notifications with the same content
+    stack_duplicates = true
+
+    # Hide the count of stacked notifications with the same content
+    hide_duplicate_count = false
+
+    # Display indicators for URLs (U) and actions (A).
+    show_indicators = no
+
+    ### Icons ###
+
+    # Align icons left/right/off
+    icon_position = left
+
+    # Scale larger icons down to this size, set to 0 to disable
+    max_icon_size = 50
+
+    # Paths to default icons.
+    # icon_path = /usr/share/icons/Dark-MacOSDark/32x32/status/:/usr/share/icons/HighContrast/32x32/devices/
+
+    ### History ###
+
+    # Should a notification popped up from history be sticky or timeout as if it would normally do.
+    sticky_history = yes
+
+    # Maximum amount of notifications kept in history
+    history_length = 20
+
+    ### Misc/Advanced ###
+
+    # dmenu path.
+    dmenu = /usr/bin/rofi -p dunst:
+
+    # Browser for opening urls in context menu.
+    browser = /usr/bin/chromium -new-tab
+
+    # Always run rule-defined scripts, even if the notification is suppressed
+    always_run_script = true
+
+    # Define the title of the windows spawned by dunst
+    title = Dunst
+
+    # Define the class of the windows spawned by dunst
+    class = Dunst
+
+    # Print a notification on startup.
+    verbosity = mesg
+
+    # Define the corner radius of the notification window in pixel size
+    corner_radius = 6
+
+    ### Legacy
+
+    # Use the Xinerama extension instead of RandR for multi-monitor support.
+    force_xinerama = false
+
+    ### mouse
+
+    # Defines action of mouse event
+    mouse_left_click = close_current
+    mouse_middle_click = do_action
+    mouse_right_click = close_all
+
+# Experimental features that may or may not work correctly. Do not expect them
+# to have a consistent behaviour across releases.
+[experimental]
+    # Calculate the dpi to use on a per-monitor basis.
+    # If this setting is enabled the Xft.dpi value will be ignored and instead
+    # dunst will attempt to calculate an appropriate dpi value for each monitor
+    # using the resolution and physical size. This might be useful in setups
+    # where there are multiple screens with very different dpi values.
+    per_monitor_dpi = false
+
+[shortcuts]
+
+    # Close notification.
+    close = ctrl+space
+
+    # Close all notifications.
+    close_all = ctrl+shift+space
+
+    # Redisplay last message(s).
+    history = ctrl+grave
+
+    # Context menu.
+    context = ctrl+shift+grave
+
+[urgency_low]
+    background = "#111111"
+    foreground = "#ffffff"
+    frame_color = "#444444"
+    timeout = 10
+
+[urgency_normal]
+    background = "#111111"
+    foreground = "#ffffff"
+    frame_color = "#888888"
+    timeout = 10
+
+[urgency_critical]
+    background = "#111111"
+    foreground = "#ffd5cd" #FDF1DB #f5bfd2 #ff8585   #ffdfd3  #fec8d8      #FDF1DB #8fbcbb
+    frame_color = "#e63946"
+    timeout = 0
+
+[Spotify]
+	appname = Spotify
+	format = "<b>%s</b>\n%b"
