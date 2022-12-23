@@ -6,10 +6,8 @@ My personal dotfiles are Open-Source, feel free to use anything you want.
 
 - Notifications: Dunst
 - WM: Leftwm
-- Shell: Fish
-- Status Bar: Polybar
-- Term: Alacritty 
+- Shell: Bash
+- Status Bar: Eww
+- Term: Kitty 
 - App Launcher: Rofi
-- Color Scheme: Iceberg
-
-> Rofi and Dunst are a fork of [vatsal999](https://github.com/vatsal999/dotfiles)
+- Color Scheme: To-Define
