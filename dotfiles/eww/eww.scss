@@ -1,0 +1,55 @@
+* {
+  all: unset;
+}
+
+.topbar {
+  font-family: "Fira Code Nerd";
+  font-size: 14px;
+  background: #1a1d23;
+}
+
+.calendar-container {
+  padding: 1rem;
+  background: #1a1d23;
+  border: 1px solid rgba(white, 0.1);
+  border-radius: 8px;
+}
+
+.widget-container {
+  padding: 8px;
+}
+
+.ws-button-busy,
+.ws-button-visible,
+.ws-button-mine,
+.ws-button-urgent,
+.ws-button {
+  border-radius: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.ws-button-mine {
+  background: #6184d8;
+}
+
+.ws-button-busy {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.ws-button-urgent {
+  background: #fe4a49;
+}
+
+scale trough highlight {
+  background-color: #6184d8;
+  color: #000000;
+  border-radius: 10px;
+}
+scale trough {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  min-height: 5px;
+  min-width: 50px;
+  margin-left: 10px;
+  margin-right: 20px;
+}

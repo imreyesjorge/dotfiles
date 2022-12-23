@@ -1,7 +1,0 @@
-configuration {
-    theme: "~/.config/rofi/Custom.rasi";
-    show-icons: true; 
-    icon-theme: "la-capitaine";
-    terminal: "/usr/bin/alacritty";
-    modi: "window,drun,run,keys,filebrowser";
-}

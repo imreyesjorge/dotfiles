@@ -1,0 +1,20 @@
+#! /bin/bash
+
+# Get the path to this script
+export SCRIPTPATH="$(  cd "$(dirname "$0")" ; pwd -P )"
+
+# Down the last running theme
+if [ -f "/tmp/leftwm-theme-down" ]; then
+    /tmp/leftwm-theme-down
+    rm /tmp/leftwm-theme-down
+fi
+
+# Create a symlink to update the current down script
+ln -sf $SCRIPTPATH/down /tmp/leftwm-theme-down
+
+# Load the current (turing) theme
+leftwm-command "LoadTheme $SCRIPTPATH/theme.ron"
+
+# Run the compositor
+# Don't know why this isn't working properly, it seems that it doesn't use the correct `.conf` file 
+picom --config $SCRIPTPATH/confs/picom.conf &

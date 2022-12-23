@@ -1,0 +1,4 @@
+#! /bin/bash
+
+~/.fehbg &
+eww open topbar &

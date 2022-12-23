@@ -1,0 +1,131 @@
+;; Variables Definitions
+(defvar isDateShown false)
+
+(defpoll time
+  :interval "10s"
+  "date '+%H:%M'"
+)
+
+(deflisten focused-window :initial ""
+  'leftwm-state -s "{{ window_title }}"'
+)
+
+(deflisten wmstate :initial ""
+  "leftwm state"
+)
+
+(defpoll volume :interval "1s"
+  "amixer -D pulse sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%' | head -1"
+)
+
+;; Widgets Containers Definitions
+
+(defwidget bar []
+  (centerbox
+    :orientation "h"
+    (left-container)
+    (center-container)
+    (right-container)
+  )
+)
+
+(defwidget cal []
+  (eventbox
+    :onhoverlost "eww close calendar"
+    (box
+      :class "calendar-container"
+      (calendar)
+    )
+  )
+)
+
+(defwidget left-container []
+  (box
+    :halign "start"
+    :class "widget-container"
+    (workspaces)
+  )
+)
+
+(defwidget center-container []
+  (box
+    :class "widget-container"
+    focused-window
+  )
+)
+
+(defwidget right-container []
+  (box
+    :halign "end"
+    :class "widget-container"
+    (scale :value volume :min 0 :max 100 :orientation "h" :onchange "amixer -D pulse sset Master {}%")
+    (clock)
+  )
+)
+
+;; Widgets Definitions
+
+(defwidget clock []
+  (eventbox
+    :onclick "eww open calendar"
+    (box
+      time
+      (image :path "bar/icons/package_icon.svg" :image-width 15 :image-height 15)
+    )
+  )
+)
+
+
+
+(defwidget workspaces []
+  (box
+    :class "workspaces"
+    :orientation "h"
+    :valing "center"
+    :halign "center"
+    :space-evenly true
+    :spacing 10
+    (for tag in '${wmstate.workspaces[0].tags}'
+      (button
+        :class {  tag.mine ? "ws-button-mine" :
+        tag.visible ? "ws-button-visible" :
+        tag.urgent ? "ws-button-urgent" :
+        tag.busy ? "ws-button-busy" : "ws-button"
+        }
+        :onclick "leftwm-command \"SendWorkspaceToTag 0 ${tag.index}\""
+        :width 20
+        ""
+      )
+    )
+  )
+)
+
+;; Windows Definitions
+
+(defwindow topbar
+  :monitor 0
+  :geometry (geometry :x "0px"
+    :y "0px"
+    :width "100%"
+    :height "25px"
+    :anchor "top left"
+  )
+  :reserve (struts :distance "35px" :side "top")
+  :stacking "fg"
+  :windowtype "dock"
+  :wm-ignore false
+  (bar)
+)
+
+(defwindow calendar
+  :monito 0
+  :geometry (geometry
+    :x "-45px"
+    :y "50px"
+    :width "100px"
+    :height "50px"
+    :anchor "top right"
+  )
+  :wm-ignore true
+  (cal)
+)

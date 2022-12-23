@@ -1,0 +1,6 @@
+#! /bin/bash
+
+leftwm command "UnloadTheme"
+
+# Kill running processes
+pkill picom 
