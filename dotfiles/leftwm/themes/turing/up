@@ -1,7 +1,8 @@
-#! /bin/bash
+#! /usr/bin/env bash
+
 
 # Get the path to this script
-export SCRIPTPATH="$(  cd "$(dirname "$0")" ; pwd -P )"
+export SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
 # Down the last running theme
 if [ -f "/tmp/leftwm-theme-down" ]; then
@@ -10,11 +11,22 @@ if [ -f "/tmp/leftwm-theme-down" ]; then
 fi
 
 # Create a symlink to update the current down script
-ln -sf $SCRIPTPATH/down /tmp/leftwm-theme-down
+ln -s $SCRIPTPATH/down /tmp/leftwm-theme-down
 
 # Load the current (turing) theme
 leftwm-command "LoadTheme $SCRIPTPATH/theme.ron"
 
-# Run the compositor
-# Don't know why this isn't working properly, it seems that it doesn't use the correct `.conf` file 
-picom --config $SCRIPTPATH/confs/picom.conf &
+# Start the compositor
+if [ -x "$(command -v picom)" ]; then
+   picom --config "${SCRIPTPATH}/confs/picom/picom.conf" &
+fi
+
+# Start eww
+if [ -x "$(command -v eww)" ]; then
+   eww open topbar --config "${SCRIPTPATH}/confs/eww" &
+fi
+
+# Start the notification daemon
+if [ -x "$(command -v eww)" ]; then
+   dunst -conf "${SCRIPTPATH}/confs/dunst/dunstrc" &
+fi

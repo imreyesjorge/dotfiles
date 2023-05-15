@@ -1,6 +1,8 @@
-#! /bin/bash
+#!/usr/bin/env bash
 
 leftwm command "UnloadTheme"
 
-# Kill running processes
-pkill picom 
+# Kill every process that `up` process started
+pkill picom
+pkill dunst
+pkill eww

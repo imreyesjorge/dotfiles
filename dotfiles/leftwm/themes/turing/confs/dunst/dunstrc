@@ -18,7 +18,7 @@
     shrink = false
 
     # The transparency of the window. 
-    transparency = 0
+    transparency = 5
 
     # The height of the entire notification. 
     notification_height = 0
@@ -30,7 +30,7 @@
     padding = 8
 
     # Horizontal padding.
-    horizontal_padding = 8
+    horizontal_padding = 16
 
     # Defines width in pixels of frame around the notification window.
     frame_width = 1 
@@ -88,7 +88,7 @@
     icon_position = left
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 50
+    max_icon_size = 40
 
     # Paths to default icons.
     # icon_path = /usr/share/icons/Dark-MacOSDark/32x32/status/:/usr/share/icons/HighContrast/32x32/devices/

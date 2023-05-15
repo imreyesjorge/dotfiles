@@ -3,16 +3,11 @@
 }
 
 .topbar {
-  font-family: "Fira Code Nerd";
-  font-size: 14px;
-  background: #1a1d23;
-}
-
-.calendar-container {
-  padding: 1rem;
-  background: #1a1d23;
-  border: 1px solid rgba(white, 0.1);
-  border-radius: 8px;
+  font-family: "Open Sans";
+  font-size: 13px;
+  background: #1A1E23;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .widget-container {
@@ -25,11 +20,12 @@
 .ws-button-urgent,
 .ws-button {
   border-radius: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .ws-button-mine {
-  background: #6184d8;
+  background: #f3f3f3;
+  //background: #6184d8;
 }
 
 .ws-button-busy {
@@ -41,15 +37,17 @@
 }
 
 scale trough highlight {
-  background-color: #6184d8;
+  //background-color: #6184d8;
+  background-color: #f3f3f3;
   color: #000000;
   border-radius: 10px;
 }
+
 scale trough {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50px;
   min-height: 5px;
   min-width: 50px;
   margin-left: 10px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
