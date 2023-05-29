@@ -37,6 +37,7 @@
     ],
     window_rules: [
 	( window_title: "Telegram", spawn_floating: true ),
+	( window_title: "Blender Preferences", spawn_floating: true ),
     ],
     disable_current_tag_swap: false,
     disable_tile_drag: false,
@@ -47,7 +48,7 @@
     sloppy_mouse_follows_focus: true,
     auto_derive_workspaces: true,
     keybind: [
-        (command: Execute, value: "dmenu_run -b", modifier: ["modkey"], key: "p"),
+        (command: Execute, value: "dmenu_run -b -nb '#1A1E23'", modifier: ["modkey"], key: "p"),
         (command: Execute, value: "alacritty", modifier: ["modkey"], key: "Return"),
 	(command: Execute, value: "chromium", modifier: ["modkey"], key: "w"),
         (command: CloseWindow, value: "", modifier: ["modkey", "Shift"], key: "q"),
