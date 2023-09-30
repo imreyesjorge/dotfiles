@@ -49,7 +49,10 @@
   (box
     :halign "end"
     :class "widget-container"
-    (scale :value volume :min 0 :max 100 :orientation "h" :onchange "pulsemixer --set-volume {}")
+    (eventbox
+      :cursor "pointer"
+      (scale :value volume :min 0 :max 100 :orientation "h" :onchange "pulsemixer --set-volume {}")
+    )
     (clock)
   )
 )
@@ -81,7 +84,7 @@
         tag.busy ? "ws-button-busy" : "ws-button"
         }
         :onclick "leftwm-command \"SendWorkspaceToTag 0 ${tag.index}\""
-	:width 20 
+	:width 18 
 	""
       )
     )
