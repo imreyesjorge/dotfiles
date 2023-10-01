@@ -6,6 +6,8 @@
   "date '+%H:%M'"
 )
 
+;; Shorter window title must be provided, as this is
+;; stretching the topbar.
 (deflisten focused-window :initial ""
   'leftwm-state -s "{{ window_title }}"'
 )
@@ -25,7 +27,7 @@
     :class "topbar"
     :orientation "h"
     (left-container)
-    (center-container)
+    (box) ;;(center-container)
     (right-container)
   )
 )
@@ -41,7 +43,6 @@
 (defwidget center-container []
   (box
     :class "widget-container"
-    focused-window
   )
 )
 
@@ -84,7 +85,7 @@
         tag.busy ? "ws-button-busy" : "ws-button"
         }
         :onclick "leftwm-command \"SendWorkspaceToTag 0 ${tag.index}\""
-	:width 18 
+	:width 19 
 	""
       )
     )

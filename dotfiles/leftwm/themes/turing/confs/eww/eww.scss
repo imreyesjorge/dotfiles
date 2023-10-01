@@ -3,15 +3,18 @@
 }
 
 .topbar {
-  font-family: "Open Sans";
+  font-family: "FiraCode Nerd Font";
   font-size: 13px;
-  background: #1A1E23;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  //background: #1A1E23;
+  //border-radius: 10px;
+  //border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .widget-container {
   padding: 8px;
+  background: #1A1E23;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .ws-button-busy,
