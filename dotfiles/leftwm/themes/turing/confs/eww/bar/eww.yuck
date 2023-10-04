@@ -20,6 +20,10 @@
   "pulsemixer --get-volume | awk '{print $1}'"
 )
 
+(defpoll outdated :interval "1s"
+  "pacman -Qu | wc -l"
+)
+
 ;; Widgets Containers Definitions
 
 (defwidget bar []
@@ -27,7 +31,7 @@
     :class "topbar"
     :orientation "h"
     (left-container)
-    (box) ;;(center-container)
+    (center-container)
     (right-container)
   )
 )
@@ -43,6 +47,7 @@
 (defwidget center-container []
   (box
     :class "widget-container"
+    "“Sometimes even to live is an act of courage” — Seneca"
   )
 )
 
@@ -63,9 +68,13 @@
 (defwidget clock []
   (eventbox
     (box
+      :spacing 10
       time
-      (image :path "bar/icons/package_icon_white.svg" :image-width 15 :image-height 15)
-    )
+      (box
+        (image :path "bar/icons/package_icon_white.svg" :image-width 15 :image-height 15)
+        outdated
+      )
+   )
   )
 )
 
