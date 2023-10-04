@@ -20,8 +20,8 @@
   "pulsemixer --get-volume | awk '{print $1}'"
 )
 
-(defpoll outdated :interval "1s"
-  "pacman -Qu | wc -l"
+(defpoll temp :interval "60s"
+  "curl wttr.in/Merida-yucatan?format=%t"
 )
 
 ;; Widgets Containers Definitions
@@ -53,11 +53,12 @@
 
 (defwidget right-container []
   (box
+    :space-evenly false
     :halign "end"
     :class "widget-container"
     (eventbox
       :cursor "pointer"
-      (scale :value volume :min 0 :max 100 :orientation "h" :onchange "pulsemixer --set-volume {}")
+      (scale :width 100 :value volume :min 0 :max 100 :orientation "h" :onchange "pulsemixer --set-volume {}")
     )
     (clock)
   )
@@ -68,11 +69,11 @@
 (defwidget clock []
   (eventbox
     (box
-      :spacing 10
+      :space-evenly false
       time
       (box
         (image :path "bar/icons/package_icon_white.svg" :image-width 15 :image-height 15)
-        outdated
+	temp
       )
    )
   )
