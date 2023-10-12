@@ -1,0 +1,6 @@
+#! /bin/bash
+
+bg_color_scheme=$(head /home/reyes/.cache/wal/colors -n 1)
+echo $bg_color_scheme
+sed -i $"/background/c\    background = \"$bg_color_scheme\"" ./dunstrc
+

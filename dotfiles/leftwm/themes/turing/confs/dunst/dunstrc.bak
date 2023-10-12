@@ -161,19 +161,19 @@
     context = ctrl+shift+grave
 
 [urgency_low]
-    background = "#0b0c12"
+    background = "#111111"
     foreground = "#ffffff"
     frame_color = "#444444"
     timeout = 10
 
 [urgency_normal]
-    background = "#0b0c12"
+    background = "#111111"
     foreground = "#ffffff"
     frame_color = "#888888"
     timeout = 10
 
 [urgency_critical]
-    background = "#0b0c12"
+    background = "#111111"
     foreground = "#ffd5cd" #FDF1DB #f5bfd2 #ff8585   #ffdfd3  #fec8d8      #FDF1DB #8fbcbb
     frame_color = "#e63946"
     timeout = 0

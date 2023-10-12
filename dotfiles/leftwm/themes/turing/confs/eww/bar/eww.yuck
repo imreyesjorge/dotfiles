@@ -6,6 +6,11 @@
   "date '+%H:%M'"
 )
 
+(defpoll background
+  :interval "1s"
+  "head /home/reyes/.cache/wal/colors -n 1"
+)
+
 ;; Shorter window title must be provided, as this is
 ;; stretching the topbar.
 (deflisten focused-window :initial ""
@@ -40,6 +45,7 @@
   (box
     :halign "start"
     :class "widget-container"
+    :style "background: ${background}" 
     (workspaces)
   )
 )
@@ -47,6 +53,7 @@
 (defwidget center-container []
   (box
     :class "widget-container"
+    :style "background: ${background}" 
     "“Sometimes even to live is an act of courage” — Seneca"
   )
 )
@@ -56,6 +63,7 @@
     :space-evenly false
     :halign "end"
     :class "widget-container"
+    :style "background: ${background}"
     (eventbox
       :cursor "pointer"
       (scale :width 100 :value volume :min 0 :max 100 :orientation "h" :onchange "pulsemixer --set-volume {}")

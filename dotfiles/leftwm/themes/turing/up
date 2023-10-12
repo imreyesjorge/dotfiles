@@ -28,5 +28,8 @@ fi
 
 # Start the notification daemon
 if [ -x "$(command -v eww)" ]; then
-   dunst -conf "${SCRIPTPATH}/confs/dunst/dunstrc" &
+   dunst -config "${SCRIPTPATH}/confs/dunst/dunstrc" &
 fi
+
+# Restore the wallpapers and the colorscheme
+wal -R
