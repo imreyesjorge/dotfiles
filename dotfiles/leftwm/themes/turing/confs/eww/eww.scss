@@ -17,26 +17,35 @@
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+.testing:hover > .ws-button {
+  color: rgba(255, 255, 255, 0.25);
+}
+
 .ws-button-busy,
 .ws-button-visible,
 .ws-button-mine,
 .ws-button-urgent,
 .ws-button {
-  border-radius: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+  //border-radius: 6px;
+  //border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .ws-button-mine {
-  background: #f3f3f3;
+  color: rgba(255, 255, 255, 1);
+  //background: #f3f3f3;
   //background: #6184d8;
 }
 
 .ws-button-busy {
-  background: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.5);
+  //background: rgba(255, 255, 255, 0.2);
 }
 
 .ws-button-urgent {
-  background: #fe4a49;
+  color: #fe4a49;
+  //background: #fe4a49;
 }
 
 scale trough highlight {

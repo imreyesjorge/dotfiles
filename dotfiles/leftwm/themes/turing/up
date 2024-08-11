@@ -27,7 +27,7 @@ if [ -x "$(command -v eww)" ]; then
 fi
 
 # Start the notification daemon
-if [ -x "$(command -v eww)" ]; then
+if [ -x "$(command -v dunst)" ]; then
    dunst -config "${SCRIPTPATH}/confs/dunst/dunstrc" &
 fi
 

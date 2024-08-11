@@ -1,9 +1,23 @@
 ;; Variables Definitions
-(defvar isDateShown false)
+(defvar eww "/usr/bin/eww -c $HOME/.config/leftwm/themes/turing/confs/eww")
+
+(defvar isTemperatureShown false)
+
+(defpoll packages
+  :interval "60s"
+  :initial "0"
+  "yay -Qu | wc -l"
+)
+
+(defpoll usedMem
+  :interval "10s"
+  :initial "0.0G"
+  "free -h --si | grep Mem | awk '{print $3}'"
+)
 
 (defpoll time
   :interval "10s"
-  "date '+%H:%M'"
+  "date '+%d/%m %H:%M'"
 )
 
 (defpoll background
@@ -57,10 +71,11 @@
     "“Sometimes even to live is an act of courage” — Seneca"
   )
 )
-
+    
 (defwidget right-container []
   (box
-    :space-evenly false
+    :space-evenly false 
+    :spacing 10
     :halign "end"
     :class "widget-container"
     :style "background: ${background}"
@@ -76,14 +91,43 @@
 
 (defwidget clock []
   (eventbox
+    :onhover "${eww} update isTemperatureShown=true"
+    :onhoverlost "${eww} update isTemperatureShown=false"
     (box
       :space-evenly false
+      :spacing 10
       time
-      (box
-        (image :path "bar/icons/package_icon_white.svg" :image-width 15 :image-height 15)
-	temp
+      (revealer
+        :transition "slideleft"
+        :reveal isTemperatureShown
+        (box
+          :space-evenly false
+          :spacing 10
+          temp
+          "|"
+          (box
+            :tooltip "Upgradable packages"
+            :spacing 4
+            packages
+            (box
+              :width 13
+              :height 13
+              (image :path "bar/icons/package_icon.svg" :image-width 13 :image-height 13)
+            )
+          )
+          (box
+            :tooltip "RAM usage"
+            :spacing 1
+            usedMem
+            (box
+              :width 13
+              :height 13
+              (image :path "bar/icons/memory_icon.svg" :image-width 13 :image-height 13)
+            )
+          )
+        )
       )
-   )
+    )
   )
 )
 
@@ -96,15 +140,20 @@
     :space-evenly true
     :spacing 10
     (for tag in '${wmstate.workspaces[0].tags}'
-      (button
-        :class {  tag.mine ? "ws-button-mine" :
-        tag.visible ? "ws-button-visible" :
-        tag.urgent ? "ws-button-urgent" :
-        tag.busy ? "ws-button-busy" : "ws-button"
-        }
-        :onclick "leftwm-command \"SendWorkspaceToTag 0 ${tag.index}\""
-	:width 19 
-	""
+      (eventbox
+        :class "testing"
+        :cursor "pointer"
+        (button
+          :class {  tag.mine ? "ws-button-mine" :
+          tag.visible ? "ws-button-visible" :
+          tag.urgent ? "ws-button-urgent" :
+          tag.busy ? "ws-button-busy" : "ws-button"
+          }
+          :onclick "leftwm-command \"SendWorkspaceToTag 0 ${tag.index}\""
+	        :width 20
+          :height 20
+	        "${tag.name}"
+        )
       )
     )
   )

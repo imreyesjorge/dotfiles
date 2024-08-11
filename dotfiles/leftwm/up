@@ -1,1 +1,5 @@
-#! /usr/bin/env bash
+#! /bin/bash
+
+xrandr --output DP-0 --mode 3440x1440 --rate 160 --primary
+
+udiskie &
