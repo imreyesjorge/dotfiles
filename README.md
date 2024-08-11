@@ -8,6 +8,7 @@ My personal dotfiles are Open-Source, feel free to use anything you want.
 - WM: Leftwm
 - Shell: Bash
 - Status Bar: Eww
-- Term: Kitty 
-- App Launcher: Rofi
-- Color Scheme: To-Define
+- Term: Alacritty
+    - Font: Ubuntu Mono Nerd Font
+- App Launcher: Dmenu
+- Color Scheme: Pywal
