@@ -3,7 +3,7 @@
 (
   border_width: 1,
   margin: 20,
-  workspace_margin: 5,
+  workspace_margin: 0,
   default_border_color: "#5e5e5e",
   floating_border_color: "#5e5e5e",
   focused_border_color: "#f3f3f3",

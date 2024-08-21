@@ -165,7 +165,7 @@
   :monitor 0
   :geometry (geometry :x "0px"
     :y "10px"
-    :width "98%"
+    :width "99%"
     :height "20px"
     :anchor "top center"
   )
