@@ -1,4 +1,12 @@
-require("config.lazy")
-require("core.keymaps")
+vim.g.mapleader = " "
 
-vim.cmd 'colorscheme lushwal'
+-- General Settings
+require("settings")
+
+-- Plugin management
+require("lazy-bootstrap") 
+require("lazy").setup("plugins")
+
+require("keybindings")
+
+vim.cmd([[colorscheme gruvbox]])
