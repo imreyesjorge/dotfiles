@@ -4,7 +4,7 @@ vim.g.mapleader = " "
 require("settings")
 
 -- Plugin management
-require("lazy-bootstrap") 
+require("lazy-bootstrap")
 require("lazy").setup("plugins")
 
 require("keybindings")

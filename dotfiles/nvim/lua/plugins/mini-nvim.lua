@@ -32,5 +32,8 @@ return {
     -- Indentscope
     require("mini.indentscope").setup()
 
+    -- Start Screen
+    require("mini.starter").setup()
+
   end
 }
