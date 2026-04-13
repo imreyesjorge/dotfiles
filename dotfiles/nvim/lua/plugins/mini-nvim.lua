@@ -20,5 +20,17 @@ return {
     -- Autopairs
     require("mini.pairs").setup()
 
+    -- Bufremove
+    require("mini.bufremove").setup()
+
+    -- Bracketed
+    require("mini.bracketed").setup()
+
+    -- Jump2D
+    require("mini.jump2d").setup()
+
+    -- Indentscope
+    require("mini.indentscope").setup()
+
   end
 }

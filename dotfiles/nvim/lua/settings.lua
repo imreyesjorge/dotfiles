@@ -22,4 +22,5 @@ opt.smartcase   = true      -- When there's a one capital letter search for exac
 opt.showmatch   = true      -- Highlight search instances
 -- }}}
 
-opt.colorcolumn = "90"
+opt.colorcolumn     = "90"
+opt.relativenumber  = true
