@@ -1,8 +1,0 @@
-[window]
-padding.x = 10
-padding.y = 10
-
-[font]
-
-normal.family = "Ubuntu Mono Nerd Font"
-size = 12.25

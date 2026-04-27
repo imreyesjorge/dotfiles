@@ -3,5 +3,5 @@
 # Update Leftwm
 rm -rf leftwm && cp -r $HOME/.config/leftwm .
 rm -rf nvim && cp -r $HOME/.config/nvim .
-rm -rf alacritty && cp -r $HOME/.config/alacritty .
+rm -rf ghostty && cp -r $HOME/.config/ghostty .
 rm -rf tmux && cp -r $HOME/.config/tmux .

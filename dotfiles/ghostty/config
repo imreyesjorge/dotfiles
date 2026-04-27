@@ -1,0 +1,5 @@
+window-padding-y = 15
+window-padding-x = 15
+font-family = FiraCode Nerd Font Mono
+macos-titlebar-style = hidden
+theme = Gruvbox Dark
